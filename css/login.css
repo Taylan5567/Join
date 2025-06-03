@@ -1,0 +1,290 @@
+.max-width {
+    max-width: 1440px;
+    max-height: 1024px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 50px;
+}
+
+header img {
+    width: 100px;
+    height: 120px;
+    margin-top: 80px;
+    margin-left: 77px;
+    gap: 0px;
+    animation-timing-function: ease-in-out;
+    animation-duration: 100ms;
+}
+
+.regiUser {
+    display: flex;
+    align-items: center;
+    width: 279px;
+    height: 49px;
+    top: 67px;
+    left: 1039px;
+    gap: 35px;
+}
+
+.registerButton {
+    font-family: Inter;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.SignUpButton {
+    display: flex;
+    align-items: center;
+    width: 95px;
+    height: 49px;
+    padding: 15px 16px 15px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    opacity: 1;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    background-color: rgb(42, 54, 71);
+}
+
+.SignUpButton:hover {
+    background-color: rgb(41, 171, 226, 1);
+    color: white;
+    box-shadow: 0px 5px 0px 0px #0000002c;
+}
+
+body {
+    background-color: rgb(246, 247, 248);
+}
+
+.sectionOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 652px;
+    height: 449px;
+    padding: 48px 50px 48px 50px;
+    gap: 32px;
+    border-radius: 30px;
+    border: 2px;
+    opacity: 1;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 14px 3px #0000000A;
+}
+
+.LoginCtn {
+    width: 315px;
+    height: 73px;
+    text-align: center;
+    gap: 16px;
+}
+
+.loginHeaderH1 {
+    font-size: 61px;
+    font-weight: 700;
+    line-height: 73.2px;
+    text-align: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.loginLine {
+    border: 2px solid rgba(41, 171, 226, 1);
+    margin-right: 80.5px;
+    margin-left: 80.5px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 422px;
+    height: 152px;
+    gap: 32px;
+    opacity: 1;
+    background-color: #ffffff;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+}
+
+.loginForm input:focus {
+    border: 1px solid #020a02;
+    box-shadow: 0 0 3px rgba(23, 80, 26, 0.5);
+}
+
+.loginEmail {
+    width: 422px;
+    height: 48px;
+    gap: 8px;
+    opacity: 1;
+    border-color: #020a02;
+}
+
+.loginPassword {
+    width: 422px;
+    height: 48px;
+    gap: 8px;
+    opacity: 1;
+}
+
+.loginInput {
+    width: 100%;
+    height: 100%;
+    gap: 0;
+    justify-content: space-between;
+    opacity: 1;
+    border-radius: 5px;
+    border-color: rgb(221, 221, 221);
+}
+
+#email {
+    background: url(../assets/svg/mail.svg) no-repeat scroll 380px center;
+    padding-left: 15px;
+    background-size: 20px;
+}
+
+#password {
+    background: url(../assets/svg/lock.svg) no-repeat scroll 380px center;
+    padding-left: 15px;
+    background-size: 20px;
+}
+
+::placeholder {
+    color: rgb(221, 221, 221);
+}
+
+.loginButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    background-color: #ffffff;
+}
+
+.loginButton {
+    display: flex;
+    align-items: center;
+    width: 115px;
+    height: 48px;
+    padding: 15px 24px 15px 24px;
+    gap: 10px;
+    border-radius: 8px;
+    opacity: 1;
+    color: #ffffff;
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 25.2px;
+    text-align: left;
+    text-underline-position: auto;
+    text-decoration-skip-ink: none;
+    background: #2A3647;
+}
+
+.loginButton:hover {
+    background-color: rgb(41, 171, 226, 1);
+    color: white;
+    box-shadow: 0px 5px 0px 0px #0000002c;
+}
+
+.guestButton {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    padding: 15px 24px 15px 24px;
+    gap: 10px;
+    border-radius: 8px;
+    opacity: 1;
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 25.2px;
+    text-align: left;
+    text-underline-position: auto;
+    text-decoration-skip-ink: none;
+    background-color: #FFFFFF;
+    border: 1px solid #2A3647
+}
+
+.guestButton:hover {
+    background-color: white;
+    color: rgb(41, 171, 226, 1);
+    box-shadow: 0px 5px 0px 0px #0000002c;
+}
+
+.rememberMeCtn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.errorMessage {
+    position: fixed;
+    color: red;
+    font-size: 14px;
+    margin-top: 134px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+}
+
+.privacy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    bottom: 2px;
+    gap: 24px;
+    opacity: 1;
+    margin-top: 150px;
+}
+
+footer a {
+    margin: 0px;
+    color: rgba(168, 168, 168, 1);
+    font-size: 16px;
+    line-height: 19.2px;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+footer a:hover {
+    cursor: pointer;
+    color: rgba(41, 171, 226, 1);
+    font-weight: 700;
+}

@@ -1,0 +1,182 @@
+#dropdown-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.dropdown-toggle {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: 1px solid #D1D1D1
+}
+
+.dropdown-arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+    transition: transform 0.1s ease;
+}
+
+.dropdown-toggle.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+#dropdown-toggle-category.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-content {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-height: calc(100vh - 703px);
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    position: absolute;
+    width: 440px;
+    display: none;
+    width: 100%;
+}
+
+#dropdown-wrapper .dropdown-content.visible {
+    display: block;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.contact-item.selected {
+    background-color: #2A3647;
+    color: white;
+}
+
+.contact-item.selected .checkbox {
+    accent-color: white;
+}
+
+.contact-item:hover {
+    background-color: #D1D1D1;
+}
+
+.contact-item.selected:hover {
+    background-color: #2A3647;
+}
+
+.contact-item.selected .initials-circle {
+    border: 1px solid white;
+}
+
+.initials-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: 200;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: border 100ms ease-in-out;
+}
+
+.selected-contact {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: 200;
+    font-size: 12px;
+    color: #fff;
+    margin: 5px;
+}
+
+.selected-contacts {
+    margin-top: 10px;
+    display: flex;
+    position: absolute;
+}
+
+
+.contact-label {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-color: white;
+    transition: all 100ms;
+}
+
+.checkbox:checked {
+    background-color: #2A3647;
+    border-color: #ffffff;
+}
+
+.checkbox:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.contact-circle-label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.extra-contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item input[type="checkbox"] {
+    pointer-events: none;
+}
+
+.dropdown-content-edit {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-height: calc(100vh - 703px);
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    position: relative;
+    width: 440px;
+    display: none;
+    width: 100%;
+}
+
+.dropdown-content-edit.visible {
+    display: flex;
+    flex-direction: column;
+}

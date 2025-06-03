@@ -1,0 +1,26 @@
+.content_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 73px;
+    margin-top: 110px;
+    gap: 30px;
+    width: 600px;
+}
+
+.nav_btn_dark_bg {
+    background-color: #081931;
+    border-radius: 16px;
+}
+
+@media(max-height:900px) {
+    .content_heading {
+        margin-top: 20px;
+    }
+}
+
+@media(max-height:920px) {
+    .add_task_required_info_box {
+        margin-top: 20px;
+    }
+}

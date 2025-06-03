@@ -1,0 +1,54 @@
+@media screen and (max-width: 1200px) {
+    .boardAddTaskOverlay.show {
+        width: calc(100vw - 40px);
+        margin-left: auto;
+        margin-right: auto;
+        left: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .add_task_right_box {
+        width: calc(100vw - 40px);
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 20px
+    }
+
+    .addTaskBottomBox {
+        width: calc(100vw - 40px);
+        justify-content: right;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 20px
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .add_task_right_box {
+        width: calc(100vw - 20px);
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 10px
+    }
+
+    .addTaskBottomBox {
+        width: calc(100vw - 40px);
+        justify-content: right;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 20px
+    }
+}
+
+@media screen and (max-height: 1000px) {
+    .boardAddTaskOverlay.show {
+        width: calc(100vw - 140px);
+        height: calc(100vh - 200px);
+        margin-left: auto;
+        margin-right: auto;
+        left: 20px;
+        right: 20px;
+    }
+}

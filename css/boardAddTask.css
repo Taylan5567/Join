@@ -1,0 +1,571 @@
+.boardAddTaskOverlay {
+    position: fixed;
+    top: 60px;
+    right: -400%;
+    width: 1116px;
+    height: 870px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    z-index: 9991;
+    transition: right 0.3s ease;
+}
+
+.boardAddTaskOverlay.show {
+    right: 550px;
+}
+
+.darkOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.231);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9990;
+}
+
+.darkOverlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.addTaskLeftBoxBoard {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.addTaskSuccessBox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9991;
+}
+
+.addTaskSuccess {
+    width: 326px;
+    height: 74px;
+    padding: 0px 25px 0px 25px;
+    border-radius: 20px;
+    background-color: #2A3647;
+    box-shadow: 0px 0px 4px 0px #00000026;
+    z-index: 9992;
+}
+
+.addTaskSuccessP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 24px;
+    padding-top: 35px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    gap: 40px;
+    color: #FFFFFF;
+}
+
+.addTaskSuccessImg {
+    width: 30px;
+    height: 30px;
+    gap: 10px;
+}
+
+.addTaskSuccessImg img {
+    width: 25;
+    height: 29.55px;
+    rotate: 90deg;
+    color: #FFFFFF;
+}
+
+.taskContainer {
+    display: flex;
+    flex-direction: column;
+    width: 252px;
+    height: 263px;
+    padding: 16px;
+    margin-top: 15px;
+    gap: 10px;
+    border-radius: 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 3px #00000014;
+}
+
+.taskChildContainer {
+    position: relative;
+    width: 220px;
+    height: 231px;
+    gap: 24px;
+}
+
+.taskTitleContainer {
+    width: 220px;
+    height: 84px;
+    gap: 8px;
+    border-radius: 10px;
+}
+
+.taskTitle {
+    width: 220px;
+    height: 38px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2A3647;
+}
+
+.taskDescription {
+    width: 220px;
+    height: 38px;
+    margin-bottom: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #A8A8A8;
+}
+
+.taskSubtask {
+    width: 220px;
+    height: 16px;
+}
+
+.progressBarContainer {
+    width: 50%;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease-in-out;
+}
+
+.progressText {
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+}
+
+.taskAssignedMain {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: -14px;
+    width: 220px;
+    height: 32px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.initialsTemplate {
+    display: flex;
+}
+
+.assigned-contact {
+    position: relative;
+    margin-left: -6px;
+}
+
+.assigned-contact:last-child {
+    margin-left: -6px;
+}
+
+.initials-circle-board {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+    z-index: 1;
+    border: 1px solid white;
+}
+
+.taskAssigned {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.assignedHiddenCount {
+    margin-left: 5px;
+}
+
+.taskPriority {
+    width: 32px;
+    position: absolute;
+    right: 0;
+}
+
+.taskOverlay {
+    position: fixed;
+    width: 525px;
+    height: 871px;
+    margin-top: 0px;
+    margin-left: 550px;
+    padding: 48px 40px 48px 40px;
+    gap: 24px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px 0px #00000029;
+    background-color: #FFFFFF;
+    z-index: 9991;
+    transition: right 0.3s ease;
+}
+
+.taskCategoryUserStory {
+    width: 113px;
+    height: 27px;
+    padding: 4px 16px 4px 16px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    background: #0038FF;
+}
+
+.taskCategoryTechnical {
+    width: 150px;
+    height: 27px;
+    padding: 4px 16px 4px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    background: #1FD7C1;
+}
+
+/* Overlay */
+.openTaskOverlayMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 525px;
+    height: 880px;
+    margin-left: 550px;
+    padding: 35px 40px 35px 40px;
+    gap: 24px;
+    border-radius: 30px;
+    position: fixed;
+    z-index: 9995;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 0px #00000029;
+    transition: right 0.3s ease;
+}
+
+.openTaskOverlayContent {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.taskOverlay.show {
+    right: 550px;
+}
+
+.openTaskOverlayCategoryUserStory {
+    width: 113px;
+    height: 27px;
+    padding: 4px 16px 4px 16px;
+    margin-bottom: 0px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    background: #0038FF;
+}
+
+.openTaskOverlayCategoryTechnical {
+    width: 150px;
+    height: 27px;
+    padding: 4px 16px 4px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    background: #1FD7C1;
+}
+
+.openTaskOverlayTitle {
+    width: 445px;
+    height: 219px;
+    font-family: Inter;
+    font-size: 61px;
+    font-weight: 700;
+    line-height: 73.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+    overflow-wrap: break-word;
+}
+
+.openTaskOverlayDescription {
+    width: 445px;
+    height: 24px;
+    margin-bottom: 70px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+}
+
+.openTaskOverlayDateContainer {
+    display: flex;
+    width: 250px;
+    height: 24px;
+    gap: 25px;
+    color: #42526E;
+    margin-bottom: 10px;
+}
+
+.openTaskOverlayDate {
+    width: 101px;
+    height: 23px;
+    font-family: Open Sans;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000 !important;
+}
+
+.openTaskOverlayPriorityContainer {
+    display: flex;
+    width: 125px;
+    height: 24px;
+    gap: 25px;
+    color: #42526E;
+    margin-bottom: 10px;
+}
+
+.openTaskOverlayPriority {
+    width: 220px;
+    height: 32px;
+    margin-bottom: 10px;
+    color: black !important;
+}
+
+.openTaskOverlayAssignedContainer {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    min-height: 150px;
+    gap: 8px;
+    color: #42526E;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.board_overlay_contact_box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+}
+
+.initialsOverlay {
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid white;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openTaskOverlayAssigned {
+    display: flex;
+    flex-direction: column;
+    width: 445px;
+    height: 116px;
+    gap: 8px;
+    color: black !important;
+}
+
+.openTaskOverlaySubtaskContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 38px;
+}
+
+.openTaskOverlaySubtaskTitle {
+    width: 220px;
+    height: 32px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000 !important;
+}
+
+.openTaskOverlaySubtasks {
+    width: 220px;
+    height: 38px;
+    margin-bottom: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #A8A8A8;
+}
+
+.openTaskOverlayButtonContainer {
+    display: flex;
+    justify-content: right;
+    width: 450px;
+    height: 24px;
+    gap: 5px;
+}
+
+.openTaskOverlayDeleteButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 81px;
+    height: 24px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+    border: transparent;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.openTaskOverlayDeleteButton img {
+    width: 24px;
+    height: 24px;
+}
+
+.openTaskOverlayDeleteButton:hover {
+    color: rgb(41, 171, 226);
+    font-weight: bold;
+}
+
+.openTaskOverlayDeleteButton:hover img {
+    content: url("../assets/svg/delete_blue.svg")
+}
+
+.openTaskOverlayEditButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 62px;
+    height: 24px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: transparent;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.openTaskOverlayEditButton img {
+    width: 24px;
+    height: 24px;
+}
+
+.openTaskOverlayEditButton:hover img {
+    content: url("../assets/svg/edit_blue.svg")
+}
+
+.openTaskOverlayEditButton:hover {
+    color: rgb(41, 171, 226);
+    font-weight: bold;
+}
+
+.openTaskOverlaySubtask {
+    display: flex;
+    gap: 20px;
+    color: black !important;
+}
+
+.openTaskOverlayStatus {
+    width: 220px;
+    height: 32px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.taskSubtaskContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}

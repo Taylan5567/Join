@@ -1,0 +1,91 @@
+.help {
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    height: calc(100vh - 109px);
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin-right: 100px;
+    overflow-y: scroll;
+    padding-bottom: 40px;
+}
+
+
+.arrow {
+    background-color: transparent;
+    color: rgb(18, 181, 235);
+    font-size: 40px;
+    border: none;
+}
+
+.howto{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.help h1 {
+    font-size: 61px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.descr {
+    gap: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 1920px;
+}
+
+.descr h2 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.use h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.number {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.helpto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coint {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.enjoy {
+    margin-top: 20px;
+    font-size: 27px;
+    font-weight: 700;
+}
+.content_help{
+    margin-left: 96px;
+}
+
+@media screen and (max-width: 900px) {
+    .enjoy{
+        padding-bottom: 50px
+    }
+    
+    .help {
+        padding-top: 50px !important;
+    }
+    .content_help{
+        margin-top: 80px;
+    }
+}

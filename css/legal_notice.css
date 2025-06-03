@@ -1,0 +1,31 @@
+h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 47px;
+    font-weight: 700;
+}
+
+.content_legal {
+    margin-left: 96px;
+}
+
+@media screen and (max-width: 900px) {
+    .end {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-top: 50px !important;
+    }
+
+    .content_legal {
+        margin-top: 80px;
+        height: calc(100vh - 159px);
+        overflow-y: auto;
+        padding: 12px;
+    }
+}

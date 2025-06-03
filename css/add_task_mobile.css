@@ -1,0 +1,151 @@
+@media(max-width:1305px) {
+    .content {
+        margin-left: 40px;
+    }
+
+    .content_heading h2 {
+        font-size: 48px;
+    }
+
+    .add_task_form_box {
+        gap: 15px;
+    }
+
+    .prio-btn {
+        width: 91px;
+        font-size: 14px;
+    }
+
+    .add_task_required_info_box {
+        padding: 20px;
+    }
+
+    #task-priority {
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width:900px) {
+    .content {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .form_box {
+        width: 90%;
+        margin: auto;
+        height: calc(100vh - 244px);
+        margin-top: 80px;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+
+    .add_task_form_box {
+        flex-direction: column;
+    }
+
+    .add_task_left_box {
+        gap: 20px;
+    }
+
+    .add_task_mid_box {
+        display: none;
+    }
+
+    .content_heading {
+        margin: auto;
+        max-width: 440px;
+        width: unset !important;
+    }
+
+    .add_task_form_box {
+        height: 100vh;
+        margin-bottom: 200px;
+        max-width: 440px;
+        margin: auto;
+    }
+
+    .add_task_form_box::-webkit-scrollbar {
+        display: none;
+    }
+
+    #task-desc {
+        max-width: none;
+    }
+
+    .add_task_right_box {
+        max-width: none;
+        height: 494px;
+        gap: 20px;
+    }
+
+    .prio-btn {
+        width: 136px;
+        font-size: 16px;
+    }
+
+    #task-priority {
+        justify-content: space-around;
+    }
+
+    .add_task_required_info {
+        display: none;
+    }
+
+    #subtask-list-container {
+        max-height: 90px;
+        min-height: 90px;
+    }
+
+    .add_task_required_info_overlay {
+        display: flex;
+    }
+
+    .add_task_buttons_box {
+        position: fixed;
+        bottom: -44px;
+        left: 0px;
+        width: 100%;
+        background-color: #F6F7F8;
+        height: 208px;
+        display: flex;
+        justify-content: end;
+        padding: 12px 16px;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+
+    .task_date_margin {
+        margin-top: 46px;
+    }
+}
+
+@media (max-height:900px) {
+    #addTaskContentId{
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+
+
+
+@media(max-height:705px) {
+    .dropdown-content {
+        max-height: calc(100vh - 460px);
+    }
+}
+
+@media(max-width:400px) {
+    .prio-btn {
+        height: 44px;
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .add_task_submit_btn span {
+        font-size: 17px;
+    }
+}

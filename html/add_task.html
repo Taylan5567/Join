@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/add_task.css">
+    <link rel="stylesheet" href="../css/add_task_contacts.css">
+    <link rel="stylesheet" href="../css/navbar_mobile.css">
+    <link rel="stylesheet" href="../css/add_task_mobile.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/mobile/Capa 1.png">
+    <script src="../scripts/contacts.js"></script>
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/users.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/add_task_template.js" defer></script>
+    <script src="../scripts/add_task_contacts.js" defer></script>
+    <script src="../scripts/contactdatabase.js" defer></script>
+    <script src="../scripts/add_task.js"></script>
+    <script src="../scripts/add_task_valid.js"></script>
+    <script src="../scripts/add_task_reset.js"></script>
+    <script src="../scripts/board.js" defer></script>
+    <script src="../scripts/task_template.js" defer></script>
+    <script src="../scripts/task_change.js" defer></script>
+    <script src="../scripts/task_switch.js" defer></script>
+    <script src="../scripts/contactvalid.js" defer></script>    
+    <title>Join</title>
+</head>
+
+<body onload="initializeApp()" onclick="closePopup(event)">
+    <section class="template_nav_header">
+        <nav class="navbar_main">
+            <div class="navbar_logo">
+                <img class="navbar_img" src="../assets/svg/logo_white.svg" alt="">
+            </div>
+            <div class="navbar_main_switches">
+                <div class="navbar_main_buttons">
+                    <button onclick="navigateToSummary()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/summary.png" alt="summary">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Summary</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToAddTask()" class="navbar_buttons nav_btn_dark_bg">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/add_task.png" alt="add_task">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Add Task</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToBoard()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/board.png" alt="board">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Board</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToContacts()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/contacts.png" alt="contacts">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Contacts</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="navbar_policy">
+                    <div class="privacy_policy">
+                        <button>
+                            <a href="../html/privacy_policy.html"> Privacy Policy</a>
+                        </button>
+                    </div>
+                    <div class="legal_notice">
+                        <button>
+                            <a href="../html/legal_notice.html">Legal notice</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="bg_grey">
+            <header class="nav_header">
+                <div>
+                    <p class="header_text">Kanban Project Management Tool</p>
+                    <img class="header_logo_img" src="../assets/svg/logo.svg" alt="logo">
+                </div>
+                <div class="header_help_user">
+                    <a href="../html/help.html">
+                        <div class="help_img">
+                            <img src="../assets/svg/help.svg" alt="help">
+                        </div>
+                    </a>
+                    <div id="user-log-out-box">
+                        <button id="user-initials-button" onclick="toggleUserPopup(event)"></button>
+                        <div id="user-popup" class="d-none">
+                            <a href="./help.html" class="popup-link hlp">Help</a>
+                            <a href="./legal_notice.html" class="popup-link">Legal Notice</a>
+                            <a href="./privacy_policy.html" class="popup-link">Privacy Policy</a>
+                            <a href="./login.html" class="popup-link">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="content" id="addTaskContentId">
+                <div id="confirmation-message" class="hidden">
+                    <span>Task added to board</span>
+                    <img src="../assets/icons/navbar/board.png" alt="board">
+                </div>
+                <form class="form_box" id="task-form" onsubmit="validateTaskForm(event)">
+                    <div class="content_heading">
+                        <h2>Add Task</h2>
+                    </div>
+                    <section class="add_task_form_box">
+                        <div class="add_task_left_box">
+                            <div class="gap_8">
+                                <label for="task-title">Title <span class="red_star">*</span></label>
+                                <input maxlength="30" type="text" id="task-title" name="title"
+                                    placeholder="Enter a title" oninput="updateSubmitButtonState()">
+                            </div>
+                            <div class="gap_8">
+                                <label for="task-desc">Description</label>
+                                <textarea maxlength="150" id="task-desc" name="description"
+                                    placeholder="Enter a Description"></textarea>
+                            </div>
+                            <div class="gap_8">
+                                <label for="task-assigned">Assigned to</label>
+                                <div id="task-assigned">
+                                    <div id="dropdown-wrapper">
+                                        <div id="dropdown-toggle">
+                                            <span>Select contacts to assign</span>
+                                            <div class="dropdown-arrow"></div>
+                                        </div>
+                                        <div id="dropdown-content">
+                                        </div>
+                                    </div>
+                                    <div id="selected-contacts">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_task_mid_box">
+                            <img src="../assets/svg/add_task/add_tastk_vertical_line.svg" alt="">
+                        </div>
+                        <div class="add_task_right_box">
+                            <div class="gap_8 task_date_margin">
+                                <label for="task-date">Due Date <span class="red_star">*</span></label>
+                                <input type="date" class="task-date" id="task-date" name="dueDate"
+                                    oninput="updateSubmitButtonState()">
+                            </div>
+                            <div class="gap_8">
+                                <p class="prio_text">Prio</p>
+                                <div id="task-priority">
+                                    <button type="button" class="prio-btn urgent" data-prio="urgent">Urgent <img
+                                            src="../assets/svg/add_task/prio_urgent.svg" alt=""></button>
+                                    <button type="button" class="prio-btn medium" data-prio="medium">Medium <img
+                                            src="../assets/svg/add_task/prio_medium.svg" alt=""></button>
+                                    <button type="button" class="prio-btn low" data-prio="low">Low <img
+                                            src="../assets/svg/add_task/prio_low.svg" alt=""></button>
+                                </div>
+                            </div>
+                            <div class="dropdown-container">
+                                <div class="gap_8">
+                                    <label for="task-category">Category <span class="red_star">*</span></label>
+                                    <div class="dropdown-container">
+                                        <div class="custom-dropdown" id="dropdown-toggle-category"
+                                            onclick="toggleDropdown(event, this, document.getElementById('dropdown-options-category'))">
+                                            <span>Select task category</span>
+                                            <div class="dropdown-arrow"></div>
+                                        </div>
+                                        <ul required class="dropdown-options hidden" id="dropdown-options-category">
+                                            <li class="dropdown-option" data-category="User Story"
+                                                onclick="selectDropdownOption(event, document.getElementById('dropdown-toggle-category'), this); updateSubmitButtonState();">
+                                                User Story</li>
+                                            <li class="dropdown-option" data-category="Technical Task"
+                                                onclick="selectDropdownOption(event, document.getElementById('dropdown-toggle-category'), this); updateSubmitButtonState();">
+                                                Technical Task</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span id="category-error" class="error-message hidden">Please select a
+                                    category</span>
+                            </div>
+                            <div class="gap_8">
+                                <label for="task-subtasks">Subtasks</label>
+                                <div id="subtask-container">
+                                    <input maxlength="40" type="text" id="new-subtask" placeholder="Add new subtask">
+                                    <img id="clear-subtask" class="d-none" src="../assets/svg/add_task/closeXSymbol.svg"
+                                        alt="">
+                                    <img id="add-subtask" src="../assets/svg/add_task/add+symbol.svg" alt="">
+                                </div>
+                                <div id="subtask-list-container">
+                                    <ul id="subtask-list"></ul>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="add_task_required_info_overlay">
+                                    <span class="red_star">*</span>
+                                    This field is required
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="add_task_required_info_box">
+                        <div>
+                            <span class="add_task_required_info">
+                                <span class="red_star">*</span>
+                                This field is required
+                            </span>
+                        </div>
+                        <div class="add_task_buttons_box">
+                            <div class="clear_save_btns">
+                                <div>
+                                    <button class="add_task_clear_btn" type="button">
+                                        <span>Clear</span>
+                                        <img src="..//assets/svg/add_task/closeXSymbol.svg" alt="X">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="add_task_submit_btn">
+                                <button id="submit-task-btn" type="submit" disabled>
+                                    <span>Create Task</span>
+                                    <img src="../assets/svg/add_task/check_create_task.svg" alt="check">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>

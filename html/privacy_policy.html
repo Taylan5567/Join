@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/mobile/Capa 1.png">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar_mobile.css">
+    <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/privacy_policy.css">
+    <link rel="stylesheet" href="../css/help_mobile.css">
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/users.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/help.js" defer></script>
+    <title>Join | Privacy Policy</title>
+</head>
+
+<body onload="initHeader()" onclick="closePopup(event)">
+    <section class="template_nav_header">
+        <nav class="navbar_main">
+            <div class="navbar_logo">
+                <img class="navbar_img" src="../assets/svg/logo_white.svg" alt="">
+            </div>
+            <div class="navbar_main_switches">
+                <div class="navbar_main_buttons">
+                    <button onclick="navigateToSummary()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/summary.png" alt="summary">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Summary</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToAddTask()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/add_task.png" alt="add_task">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Add Task</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToBoard()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/board.png" alt="board">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Board</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToContacts()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/contacts.png" alt="contacts">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Contacts</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="navbar_policy">
+                    <div class="privacy_policy">
+                        <button>
+                            <a href="../html/privacy_policy.html"> Privacy Policy</a>
+                        </button>
+                    </div>
+                    <div class="legal_notice">
+                        <button>
+                            <a href="../html/legal_notice.html">Legal notice</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="bg_grey">
+            <header class="nav_header">
+                <div>
+                    <p class="header_text">Kanban Project Management Tool</p>
+                    <img class="header_logo_img" src="../assets/svg/logo.svg" alt="logo">
+                </div>
+                <div class="header_help_user">
+                    <a href="../html/help.html">
+                        <div class="help_img">
+                            <img src="../assets/svg/help.svg" alt="help">
+                        </div>
+                    </a>
+                    <div id="user-log-out-box">
+                        <button id="user-initials-button" onclick="toggleUserPopup(event)"></button>
+                        <div id="user-popup" class="d-none">
+                            <a href="./help.html" class="popup-link hlp">Help</a>
+                            <a href="./legal_notice.html" class="popup-link">Legal Notice</a>
+                            <a href="./privacy_policy.html" class="popup-link">Privacy Policy</a>
+                            <a href="./login.html" class="popup-link">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="content">
+                <div class="privacy">
+                    <div class="privacyhead">
+                        <h1>Privacy Policy</h1>
+                        <button class="arrow" onclick="goBack()">
+                            <img src="../assets/svg/arrow-left-line.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="sub">
+                        <h2>1. General Information</h2>
+                        <p>Your privacy is important to us. This privacy policy explains how we collect, use, and
+                            protect your personal data in compliance with applicable data protection laws (GDPR, CCPA).
+                        </p>
+                    </div>
+
+                    <div class="sub">
+                        <h2>2. Data Controller</h2>
+                        <p><strong>Company Name:</strong> Join by Developer Akademie GmbH</p>
+                        <p><strong>Address:</strong> Tassilopl. 25</p>
+                        <p><strong>Email:</strong> info@join408.de</p>
+                    </div>
+
+                    <div class="sub">
+                        <h2>3. Data We Collect</h2>
+                        <ul>
+                            <li>Personal identification information (name, email, phone number, etc.)</li>
+                            <li>Technical data (IP address, browser type, etc.)</li>
+                            <li>Usage data (how you interact with our website and services)</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub">
+                        <h2>4. Purpose of Data Processing</h2>
+                        <p>We use your data to:</p>
+                        <ul>
+                            <li>Provide and improve our services</li>
+                            <li>Process transactions and customer requests</li>
+                            <li>Ensure security and prevent fraud</li>
+                            <li>Comply with legal obligations</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub">
+                        <h2>5. Data Sharing</h2>
+                        <p>We do not sell or rent your data. Data may be shared with third parties only when:</p>
+                        <ul>
+                            <li>Necessary for service fulfillment</li>
+                            <li>Required by law</li>
+                            <li>Explicit consent is given</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub">
+                        <h2>6. Data Retention</h2>
+                        <p>Your data is stored only for as long as necessary for the purposes stated above. Once no
+                            longer needed, it will be securely deleted.</p>
+                    </div>
+
+                    <div class="sub">
+                        <h2>7. Your Rights</h2>
+                        <p>You have the right to:</p>
+                        <ul>
+                            <li>Access your data</li>
+                            <li>Request correction or deletion</li>
+                            <li>Restrict processing</li>
+                            <li>Object to processing</li>
+                            <li>Request data portability</li>
+                        </ul>
+                        <p>To exercise your rights, contact us at [Your Email].</p>
+                    </div>
+
+                    <div class="sub">
+                        <h2>8. Cookies and Tracking</h2>
+                        <p>We use cookies to improve user experience. You can manage your cookie preferences in your
+                            browser settings.</p>
+                    </div>
+
+                    <div class="sub">
+                        <h2>9. Changes to This Policy</h2>
+                        <p>We reserve the right to update this policy. Any changes will be reflected on this page.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>

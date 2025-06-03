@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar_mobile.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/summary.css">
+    <link rel="stylesheet" href="../css/summary_mobile.css">
+    <link rel="icon" href="../assets/mobile/Capa 1.png">
+    <script src="../scripts/header.js" defer></script>
+    <script src="../scripts/navbar.js" defer></script>
+    <script src="../scripts/add_task.js" defer></script>
+    <script src="../scripts/add_task_valid.js" defer></script>
+    <script src="../scripts/add_task_reset.js" defer></script>
+    <script src="../scripts/board_template.js" defer></script>
+    <script src="../scripts/board.js" defer></script>
+    <script src="../scripts/task_template.js" defer></script>
+    <script src="../scripts/task_change.js" defer></script>
+    <script src="../scripts/task_switch.js" defer></script>
+    <script src="../scripts/login.js" defer></script>
+    <script src="../scripts/users.js" defer></script>
+    <script src="../scripts/summary.js" defer></script>
+    <script src="../scripts/contactvalid.js" defer></script>    
+    <title>Join</title>
+</head>
+
+<body onload="initHeader()" onclick="closePopup(event)">
+    <section class="template_nav_header">
+        <nav class="navbar_main">
+            <div class="navbar_logo">
+                <img class="navbar_img" src="../assets/svg/logo_white.svg" alt="">
+            </div>
+            <div class="navbar_main_switches">
+                <div class="navbar_main_buttons">
+                    <button onclick="navigateToSummary()" class="navbar_buttons nav_btn_dark_bg">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/summary.png" alt="summary">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Summary</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToAddTask()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/add_task.png" alt="add_task">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Add Task</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToBoard()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/board.png" alt="board">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Board</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToContacts()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/contacts.png" alt="contacts">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Contacts</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="navbar_policy">
+                    <div class="privacy_policy">
+                        <button>
+                            <a href="../html/privacy_policy.html"> Privacy Policy</a>
+                        </button>
+                    </div>
+                    <div class="legal_notice">
+                        <button>
+                            <a href="../html/legal_notice.html">Legal notice</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="bg_grey">
+            <header class="nav_header">
+                <div>
+                    <p class="header_text">Kanban Project Management Tool</p>
+                    <img class="header_logo_img" src="../assets/svg/logo.svg" alt="logo">
+                </div>
+                <div class="header_help_user">
+                    <a href="../html/help.html">
+                        <div class="help_img">
+                            <img src="../assets/svg/help.svg" alt="help">
+                        </div>
+                    </a>
+                    <div id="user-log-out-box">
+                        <button id="user-initials-button" onclick="toggleUserPopup(event)"></button>
+                        <div id="user-popup" class="d-none">
+                            <a href="./help.html" class="popup-link hlp">Help</a>
+                            <a href="./legal_notice.html" class="popup-link">Legal Notice</a>
+                            <a href="./privacy_policy.html" class="popup-link">Privacy Policy</a>
+                            <a href="#" onclick="logout(event)" class="popup-link">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="overlay_greeting" id="overlay_greeting">
+                <div class="overlay_message_container">
+                    <div class="greeting_message_overlay" id="greeting-message-overlay"></div>
+                    <div class="greeting_message_name_overlay" id="user-name-greeting-overlay"></div>
+                </div>
+            </div>
+            <section class="flex_content_summary">
+                <section class="content">
+                    <div class="content_heading">
+                        <p class="join_360">Join 360</p>
+                        <img class="heading_img" src="../assets/svg/vertical_line.svg" alt="line">
+                        <p class="heading_info">Key Metrics at a Glance</p>
+                        <div class="blue_line"></div>
+                    </div>
+                    <div class="summary_overview">
+                        <div class="summary_first_line_box">
+                            <button onclick="navigateToBoard()" class="summary_to_board_button">
+                                <div class="inner_first_line_box">
+                                    <div class="ellipse_box">
+                                        <img class="inner_first_line_img" src="../assets/svg/summary/pencil2.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="to_do_infos">
+                                        <div class="summary_number" id="to_do_show">
+                                            0
+                                        </div>
+                                        <p>To-Do</p>
+                                    </div>
+                                </div>
+                            </button>
+                            <button onclick="navigateToBoard()" class="summary_to_board_button">
+                                <div class="inner_first_line_box">
+                                    <div class="ellipse_box">
+                                        <img class="inner_first_line_img" src="../assets/svg/summary/done.svg" alt="">
+                                    </div>
+                                    <div class="to_do_infos">
+                                        <div class="summary_number" id="done_show">
+                                            0
+                                        </div>
+                                        <p>Done</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <button class="summary_to_board_button">
+                            <div onclick="navigateToBoard()" class="urgent_box">
+                                <div class="urgent_first_box">
+                                    <div>
+                                        <img src="../assets/svg/urgent.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <div class="summary_number" id="urgent_num_show">
+                                            0
+                                        </div>
+                                        <p class="urgent_text">urgent</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img class="urgent_vertical_line" src="../assets/svg/vertical_line_small.svg"
+                                        alt="">
+                                </div>
+                                <div class="urgent_deadline_box">
+                                    <p class="date_line" id="date-of-due">Test text</p>
+                                    <p class="deadline_text">Upcoming Deadline</p>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="summary_overview_board">
+                            <button onclick="navigateToBoard()" class="summary_to_board_button">
+                                <div class="summary_overview_board_box">
+                                    <div id="tasks-in-board" class="summary_overview_board_num">
+                                        0
+                                    </div>
+                                    <p>Tasks in <br>Board</p>
+                                </div>
+                            </button>
+                            <button onclick="navigateToBoard()" class="summary_to_board_button">
+                                <div class="summary_overview_board_box">
+                                    <div id="tasks-in-progress" class="summary_overview_board_num">
+                                        0
+                                    </div>
+                                    <p>Tasks in <br>Progress</p>
+                                </div>
+                            </button>
+                            <button onclick="navigateToBoard()" class="summary_to_board_button">
+                                <div class="summary_overview_board_box">
+                                    <div id="tasks-in-awaiting" class="summary_overview_board_num">
+                                        0
+                                    </div>
+                                    <p>Awaiting<br>Feedback</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="greetings_message_box">
+                    <div>
+                        <div class="greeting_message" id="greeting-message"></div>
+                        <div class="greeting_message_name" id="user-name-greeting"></div>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>

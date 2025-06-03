@@ -1,0 +1,299 @@
+@media(max-width:900px) {
+    .loginHeaderH1 {
+        font-size: 44px;
+        margin-bottom: 4px;
+    }
+
+    .logo {
+        width: 50px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0, 75s ease-in-out;
+    }
+
+    .loginLine {
+        margin-right: 113.5px;
+        margin-left: 113.5px;
+    }
+
+    .regiUser {
+        display: none;
+    }
+
+    .mobilelogin {
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 0 0;
+    }
+
+    .mainLogin {
+        width: 94%;
+        margin: auto;
+        height: 510px;
+        padding: 5px 0px;
+        max-width: 440px;
+    }
+
+    .privacy {
+        margin-left: 0;
+    }
+
+    header img {
+        width: 150px;
+        height: 150px;
+        padding: 0 0 20px 20px;
+        margin-top: 50px;
+        margin-left: 50px;
+        opacity: 1;
+    }
+
+    .signUpArrow {
+        margin-right: 300px;
+        margin-top: 50px;
+    }
+
+    .loginForm {
+        width: 90%;
+        margin: 0px;
+    }
+
+    .loginEmail {
+        width: 100%;
+        margin: auto;
+        max-width: 440px;
+    }
+
+    .loginPassword {
+        width: 100%;
+        margin: auto;
+        max-width: 440px;
+    }
+
+    #password {
+        background-position: calc(100% - 14px) center;
+        padding-left: 15px;
+        background-size: 20px;
+    }
+
+    .loginButtons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .loginButton {
+        width: 180px;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .guestButton {
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    #email {
+        background: url(../assets/svg/mail.svg) no-repeat;
+        background-position: calc(100% - 14px) center;
+        padding-left: 15px;
+        background-size: 20px;
+    }
+
+    .signUpInput {
+        width: 100%;
+    }
+
+    .signUpInputPassword {
+        width: 100%;
+    }
+
+    #name {
+        background: url(../assets/svg/mail.svg) no-repeat;
+        background-position: calc(100% - 14px) center;
+        background-size: 20px;
+    }
+
+    .sectionOne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .errorMessage {
+        margin-bottom: 60px;
+        max-width: 350px;
+    }
+
+    .checkboxMain {
+        width: 250px;
+        height: 20px;
+    }
+
+    .signUpMain {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        bottom: 40px;
+        gap: 5px;
+        margin-right: 150px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width:901px) {
+    .mobilelogin {
+        display: none;
+    }
+}
+
+@media (max-width: 870px) {
+    .signUpSuccessClass {
+        margin-left: 292px;
+    }
+}
+
+@media (max-width: 610px) {
+    .signUpSuccessClass {
+        margin-left: 163px;
+    }
+
+    .signUpArrow {
+        margin-right: 300px;
+        z-index: 10;
+    }
+
+    header {
+        gap: 15px;
+        padding: 20px;
+        margin-bottom: 75px;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+        padding: 0 0 20px 20px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        gap: 15px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    header img {
+        width: 75px;
+        height: 75px;
+        padding: 0 0 20px 20px;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+
+    .privacy {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .signUpSuccessClass {
+        margin-left: 27px;
+    }
+
+    .errorMessage {
+        margin-bottom: 60px;
+        max-width: 350px;
+    }
+
+    .signUpArrow {
+        margin-right: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .checkboxMain {
+        position: relative;
+        bottom: 0px;
+        width: 150px;
+        height: 20px;
+        padding-bottom: 15px;
+    }
+
+    .signUpMain {
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        margin-right: 150px;
+    }
+
+}
+
+@media (max-width: 376px) {
+    .signUpCtn {
+        position: relative;
+        bottom: 0px;
+
+    }
+
+    .signUpMain {
+        position: relative;
+        bottom: 40px;
+    }
+
+    .signUpErrorMain {
+        position: relative;
+        bottom: 0px;
+        min-width: 300px;
+        min-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .signUpArrow {
+        margin-right: 250px;
+        margin-bottom: 370px;
+        z-index: 10;
+    }
+
+    .signUpHeaderH1 {
+        position: relative;
+        font-size: 50px;
+        bottom: 0px;
+    }
+
+    .signUpButton {
+        bottom: 0px;
+    }
+
+    .checkboxMain{
+        bottom: 0px;
+    }
+
+    /* .loginHeaderH1 {
+        font-size: 35px;
+        margin-bottom: 4px;
+    }
+
+    .mobilelogin {
+        margin: 5px;
+    }
+
+    .loginForm {
+        height: 100px;
+    }
+
+    .mainLogin {
+        height: 450px;
+    }
+
+    .rememberMeCtn {
+        position: relative;
+        bottom: 12px;
+    } */
+}

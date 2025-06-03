@@ -1,0 +1,286 @@
+@media screen and (max-width: 1920px) {
+    .show {
+        right: 350px !important;
+    }
+}
+
+@media screen and (max-width: 1720px) {
+    .show {
+        right: 180px !important;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .show {
+        right: 100px !important;
+    }
+
+    .boardDropDown {
+        width: 250px;
+    }
+
+    .boardColumnHeader {
+        width: 200px;
+    }
+
+    .boardColumn {
+        width: 275px;
+    }
+
+    .contentBoard {
+        width: 0px;
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    .show {
+        right: 50px !important;
+    }
+
+    .boardColumnHeader {
+        width: 180px;
+    }
+
+    .boardColumn {
+        width: 250px;
+    }
+
+    .contentBoard {
+        width: 0px;
+    }
+
+    .contentHeading {
+        width: 0px;
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .content {
+        margin-left: -15px;
+    }
+
+    .boardAddTaskOverlay {
+        width: 1000px;
+    }
+
+    #tasksContainerToDo,
+    #tasksContainerInProgress,
+    #tasksContainerAwaitFeedback,
+    #tasksContainerDone {
+
+        height: 300px;
+
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .boardColumnHeader {
+        width: calc(100vw - 400px);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .boardColumn {
+        width: 200px;
+    }
+
+    .boardDropDown {
+        width: calc(100vw - 400px);
+        overflow-x: scroll;
+        height: 300px;
+        margin-top: 0px;
+    }
+
+    .board {
+        flex-wrap: wrap;
+        gap: 300px;
+    }
+
+    .contentHeadingMain {
+        width: calc(100vw - 400px);
+        margin-left: 60px;
+    }
+
+    #tasksContainerToDo,
+    #tasksContainerInProgress,
+    #tasksContainerAwaitFeedback,
+    #tasksContainerDone {
+        display: flex;
+        height: 0px;
+        gap: 20px;
+    }
+
+    .noTasksParent {
+        width: calc(100vw - 400px);
+    }
+
+    .content {
+        overflow-y: scroll;
+        scrollbar-width: none;
+        height:calc(100vh - 150px);
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .contentHeadingMain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentHeadingSearchMain {
+        width: 250px;
+    }
+
+    .contentHeading {
+        margin-bottom: 50px;
+    }
+
+    .contentHeadingSearchStrich {
+        right: 10px;
+
+    }
+
+    .contentHeadingSearchImg {
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .boardColumnHeader {
+        width: calc(100vw - 80px);
+    }
+
+    .contentHeadingMain {
+        width: calc(100vw - 150px);
+        margin-top: 120px;
+    }
+
+    .boardDropDown {
+        width: calc(100vw - 80px);
+        margin-top: 10px;
+    }
+
+    .noTasksParent {
+        width: calc(100vw - 150px);
+    }
+
+    .saveButtonMain {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .taskContainer {
+        margin-top: 0px;
+    }
+
+    .taskCategorySwitchContainer {
+        flex-direction: row-reverse;
+    }
+
+    .openTaskOverlayChangeButton {
+        display: flex;
+        z-index: 100;
+    }
+
+    .taskSwitchCancel {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 900px), (min-height: 1400px) {
+    .content {
+        height: calc(100vh - 130px);
+        margin-bottom: 40px;
+    }
+} */
+
+@media screen and (max-width: 900px) {
+    .content {
+        height: calc(100vh - 72px);
+    }
+}
+
+@media screen and (max-width: 730px) {
+
+    .openEditTaskOverlaySubtask {
+        inline-size: auto;
+        padding: 10px 0px 0px 0px;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .miniAddTaskImg {
+        display: block;
+        width: 42px;
+        height: 42px;
+        color: white;
+        background-color: rgb(42, 54, 71);
+        border-radius: 20%;
+    }
+
+    .miniAddTaskImg:hover {
+        background-color: rgb(41, 171, 226);
+        border: 1px solid rgb(41, 171, 226);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .contentHeadingSmall {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100vw - 140px);
+    }
+
+    .contentHeading {
+        margin-bottom: 100px;
+    }
+
+    .contentHeadingSearchStrich {
+        right: 10px;
+    }
+
+    .contentHeadingSearchImg {
+        right: 150px;
+    }
+
+    .contentHeadingOrder {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .saveButtonOk {
+        margin-left: calc(100vw - 240px);
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+    .contentHeadingSmall {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100vw - 60px);
+    }
+
+    .contentHeadingSearchStrich {
+        right: 10px;
+    }
+
+    .contentHeadingSearchImg {
+        right: 150px;
+    }
+
+    .boardColumnHeader,
+    .contentHeadingMain,
+    .boardDropDown,
+    .noTasksParent {
+        width: calc(100vw - 60px);
+    }
+
+    .contentBoard,
+    .contentHeadingMain {
+        margin-left: 40px;
+    }
+}

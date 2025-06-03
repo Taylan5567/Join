@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Contact</title>
+    <link rel="icon" href="../assets/mobile/Capa 1.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/summary.css">
+    <link rel="stylesheet" href="../css/contact_mobile.css">
+    <link rel="stylesheet" href="../css/navbar_mobile.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contactmedia.css?v=1234">
+    <link rel="stylesheet" href="../css/contacttwo.css">
+    <!-- scripts -->
+    <script src="../scripts/header.js" defer></script>
+    <script src="../scripts/users.js" defer></script>
+    <script src="../scripts/task_change.js" defer></script>
+    <script src="../scripts/task_switch.js" defer></script>
+    <script src="../scripts/contacts.js" defer></script>
+    <script src="../scripts/navbar.js" defer></script>
+    <script src="../scripts/contact_template.js" defer></script>
+    <script src="../scripts/contactdatabase.js" defer></script>
+    <script src="../scripts/contactvalid.js" defer></script>
+</head>
+
+<body onload="initHeader()" onclick="closePopup(event)">
+    <section class="template_nav_header">
+        <nav class="navbar_main">
+            <div class="navbar_logo">
+                <img class="navbar_img" src="../assets/svg/logo_white.svg" alt="">
+            </div>
+            <div class="navbar_main_switches">
+                <div class="navbar_main_buttons">
+                    <button onclick="navigateToSummary()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/summary.png" alt="summary">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Summary</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToAddTask()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/add_task.png" alt="add_task">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Add Task</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToBoard()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/board.png" alt="board">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Board</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToContacts()" class="navbar_buttons nav_btn_dark_bg">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/contacts.png" alt="contacts">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Contacts</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="navbar_policy">
+                    <div class="privacy_policy">
+                        <button>
+                            <a href="../html/privacy_policy.html"> Privacy Policy</a>
+                        </button>
+                    </div>
+                    <div class="legal_notice">
+                        <button>
+                            <a href="../html/legal_notice.html">Legal notice</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="bg_grey">
+            <header class="nav_header">
+                <div>
+                    <p class="header_text">Kanban Project Management Tool</p>
+                    <img class="navbar_img_mobile" src="../assets/mobile/Capa 1.png" alt="">
+                </div>
+                <div class="header_help_user">
+                    <a href="../html/help.html">
+                        <div class="help_img">
+                            <img src="../assets/svg/help.svg" alt="help">
+                        </div>
+                    </a>
+                    <div id="user-log-out-box">
+                        <button id="user-initials-button" onclick="toggleUserPopup(event)"></button>
+                        <div id="user-popup" class="d-none">
+                            <a href="./help.html" class="popup-link hlp">Help</a>
+                            <a href="./legal_notice.html" class="popup-link">Legal Notice</a>
+                            <a href="./privacy_policy.html" class="popup-link">Privacy Policy</a>
+                            <a href="./login.html" class="popup-link">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="overlay" class="slide-in" style="display: none;">
+                <div class="overcontent">
+                    <div class="overlay-left">
+                        <img class="logoover" src="../assets/svg/logo_white.svg">
+                        <button class="closebutton" onclick="closeOverlay()">X</button>
+                        <h1>Add contact</h1>
+                        <p class="description">Tasks are better with a team!</p>
+                        <hr class="line">
+                    </div>
+                    <div class="overlay-content">
+                        <form id="contact-form">
+                            <div class="form">
+                                <div class="circle overlaycirc"></div>
+                                <div class="formtext">
+                                    <input type="text" id="contact-name" placeholder="Name" maxlength="20" required
+                                        oninput="nameValidate(event)" />
+                                    <p id="name-error" class="error" style="display: none;"></p>
+                                    <input type="email" id="contact-email" placeholder="Email" maxlength="30" required
+                                        oninput="validateEmail(event)" />
+                                    <p id="email-error" class="error" style="display: none;"></p>
+                                    <input type="text" id="contact-phone" placeholder="Phone" maxlength="10" required
+                                        oninput="validatePhone(event)" />
+                                    <p id="phone-error" class="error" style="display: none;"></p>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button class="cancel" type="button" onclick="closeOverlay()">Cancel <img
+                                        class="cancelicon" src="../assets/icons/contact/cancel.png"></button>
+                                <button class="submit" type="submit">Create contact <img class="check"
+                                        src="../assets/icons/contact/check.png"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <section class="flex_content">
+                <div class="successcreate"></div>
+                <section class="cont">
+                    <div class="scrolllist show">
+                        <div class="btnclass">
+                            <button class="btncont" onclick="openOverlay('new')">
+                                <p class="btnp">Add new Contact</p>
+                                <img class="imgcont" src="../assets/icons/contact/person_add.png">
+                            </button>
+                        </div>
+                        <div id="contactlist"></div>
+                        <div class="btnmobile">
+                            <button class="btnmob" onclick="openOverlay('new')"><img class="mobileadd"
+                                    src="../assets/icons/contact/person_add.png"></button>
+                        </div>
+                    </div>
+                </section>
+                <div class="flexdetails">
+                    <div class="detailshead">
+                        <h1>Contacts</h1>
+                        <hr style="width: 0; height: 59px; border: 3px solid; border-color: #29ABE2;">
+                        <p>Better with a team</p>
+                    </div>
+                    <div id="contact-details" class="hide">
+                        <div class="circle"></div>
+                        <p id="details-name"></p>
+                        <p id="details-phone"></p>
+                        <p id="details-email"></p>
+                    </div>
+                </div>
+            </section>
+            <div id="confirm-overlay" class="confirm-overlay hide">
+                <div class="confirm-box">
+                    <p>Möchten Sie diesen Kontakt wirklich löschen?</p>
+                    <div class="confirm-buttons">
+                        <button id="confirm-yes" class="yes-button">Ja</button>
+                        <button id="confirm-no" class="no-button">Nein</button>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.logo {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .logoFadeImg {
+        width: 100px;
+    }
+}
+
+@media (min-width: 901px) {
+    .logoFadeImg {
+        width: 100px;
+    }
+
+    .logo {
+        transition: all 1s ease-in-out;
+    }
+
+}

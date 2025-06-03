@@ -1,0 +1,82 @@
+<section class="template_nav_header">
+    <nav class="navbar_main">
+        <div class="navbar_logo">
+            <img class="navbar_img" src="../assets/svg/logo_white.svg" alt="">
+        </div>
+        <div class="navbar_main_switches">
+            <div class="navbar_main_buttons">
+                <button onclick="navigateToSummary()" class="navbar_buttons">
+                    <div class="navbar_buttons_img">
+                        <img src="../assets/icons/navbar/summary.png" alt="summary">
+                    </div>
+                    <div class="navbar_buttons_text">
+                        <p>Summary</p>
+                    </div>
+                </button>
+                <button onclick="navigateToAddTask()" class="navbar_buttons">
+                    <div class="navbar_buttons_img">
+                        <img src="../assets/icons/navbar/add_task.png" alt="add_task">
+                    </div>
+                    <div class="navbar_buttons_text">
+                        <p>Add Task</p>
+                    </div>
+                </button>
+                <button onclick="navigateToBoard()" class="navbar_buttons">
+                    <div class="navbar_buttons_img">
+                        <img src="../assets/icons/navbar/board.png" alt="board">
+                    </div>
+                    <div class="navbar_buttons_text">
+                        <p>Board</p>
+                    </div>
+                </button>
+                <button onclick="navigateToContacts()" class="navbar_buttons">
+                    <div class="navbar_buttons_img">
+                        <img src="../assets/icons/navbar/contacts.png" alt="contacts">
+                    </div>
+                    <div class="navbar_buttons_text">
+                        <p>Contacts</p>
+                    </div>
+                </button>
+            </div>
+            <div class="navbar_policy">
+                <div class="privacy_policy">
+                    <button>
+                        <a href="../html/privacy_policy.html"> Privacy Policy</a>
+                    </button>
+                </div>
+                <div class="legal_notice">
+                    <button>
+                        <a href="../html/legal_notice.html">Legal notice</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="bg_grey">
+        <header class="nav_header">
+            <div>
+                <p class="header_text">Kanban Project Management Tool</p>
+                <img class="header_logo_img" src="../assets/svg/logo.svg" alt="logo">
+            </div>
+            <div class="header_help_user">
+                <a href="../html/help.html">
+                    <div class="help_img">
+                        <img src="../assets/svg/help.svg" alt="help">
+                    </div>
+                </a>
+                <div id="user-log-out-box">
+                    <button id="user-initials-button" onclick="toggleUserPopup(event)"></button>
+                    <div id="user-popup" class="d-none">
+                        <a href="./help.html" class="popup-link hlp">Help</a>
+                        <a href="./legal_notice.html" class="popup-link">Legal Notice</a>
+                        <a href="./privacy_policy.html" class="popup-link">Privacy Policy</a>
+                        <a href="./login.html" class="popup-link">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+        </section>
+    </section>
+</section>

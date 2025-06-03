@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/mobile/Capa 1.png">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar_mobile.css">
+    <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/help.css">
+    <link rel="stylesheet" href="../css/help_mobile.css">
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/users.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/help.js" defer></script>
+    <title>Join | Help</title>
+</head>
+
+<body onload="initHeader()" onclick="closePopup(event)">
+    <section class="template_nav_header">
+        <nav class="navbar_main">
+            <div class="navbar_logo">
+                <img class="navbar_img" src="../assets/svg/logo_white.svg" alt="">
+            </div>
+            <div class="navbar_main_switches">
+                <div class="navbar_main_buttons">
+                    <button onclick="navigateToSummary()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/summary.png" alt="summary">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Summary</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToAddTask()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/add_task.png" alt="add_task">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Add Task</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToBoard()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/board.png" alt="board">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Board</p>
+                        </div>
+                    </button>
+                    <button onclick="navigateToContacts()" class="navbar_buttons">
+                        <div class="navbar_buttons_img">
+                            <img src="../assets/icons/navbar/contacts.png" alt="contacts">
+                        </div>
+                        <div class="navbar_buttons_text">
+                            <p>Contacts</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="navbar_policy">
+                    <div class="privacy_policy">
+                        <button>
+                            <a href="../html/privacy_policy.html"> Privacy Policy</a>
+                        </button>
+                    </div>
+                    <div class="legal_notice">
+                        <button>
+                            <a href="../html/legal_notice.html">Legal notice</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="bg_grey">
+            <header class="nav_header">
+                <div>
+                    <p class="header_text">Kanban Project Management Tool</p>
+                    <img class="header_logo_img" src="../assets/svg/logo.svg" alt="logo">
+                </div>
+                <div class="header_help_user">
+                    <a href="../html/help.html">
+                        <div class="help_img">
+                            <img src="../assets/svg/help.svg" alt="help">
+                        </div>
+                    </a>
+                    <div id="user-log-out-box">
+                        <button id="user-initials-button" onclick="toggleUserPopup(event)"></button>
+                        <div id="user-popup" class="d-none">
+                            <a href="./help.html" class="popup-link hlp">Help</a>
+                            <a href="./legal_notice.html" class="popup-link">Legal Notice</a>
+                            <a href="./privacy_policy.html" class="popup-link">Privacy Policy</a>
+                            <a href="./login.html" class="popup-link">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="content content_help">
+                <div class="help">
+                    <div class="helpto">
+                        <h1>Help</h1>
+                        <button class="arrow" onclick="goBack()">
+                            <img src="../assets/svg/arrow-left-line.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="descr">
+                        <p>Welcome to the help page for Join, your guide to using our kanban project management tool.
+                            Here, we'll provide an overview of what Join is, how it can benefit you, and how to use it.
+                        </p>
+                        <h2>What is Join?</h2>
+                        <p>Join is a kanban-based project management tool designed and built by a group of dedicated
+                            students as part of their web development bootcamp at the Developer Akademie.</p>
+                        <p>Kanban, a Japanese term meaning "billboard", is a highly effective method to visualize work,
+                            limit work-in-progress, and maximize efficiency (or flow). Join leverages the principles of
+                            kanban to help users manage their tasks and projects in an intuitive, visual interface</p>
+                        <p>It is important to note that Join is designed as an educational exercise and is not intended
+                            for extensive business usage. While we strive to ensure the best possible user experience,
+                            we cannot guarantee consistent availability, reliability, accuracy, or other aspects of
+                            quality regarding Join.</p>
+                        <h2>How to use it</h2>
+                        <p>Here is a step-by-step guide on how to use Join:</p>
+                        <div class="howto">
+                            <p class="number">1.</p>
+                            <div class="use">
+                                <h2>Exploring the Board</h2>
+                                <p>When you log in to Join, you'll find a default board. This board represents your
+                                    project and contains four default lists: "To Do", "In Progress", “Await feedback”
+                                    and "Done".</p>
+                            </div>
+                        </div>
+                        <div class="howto">
+                            <p class="number">2.</p>
+                            <div class="use">
+                                <h2>Creating Contacts</h2>
+                                <p>In Join, you can add contacts to collaborate on your projects. Go to the "Contacts"
+                                    section, click on "New contact", and fill in the required information. Once added,
+                                    these contacts can be assigned tasks and they can interact with the tasks on the
+                                    board.</p>
+                            </div>
+                        </div>
+                        <div class="howto">
+                            <p class="number">3.</p>
+                            <div class="use">
+                                <h2>Adding Cards</h2>
+                                <p>Now that you've added your contacts, you can start adding cards. Cards represent
+                                    individual tasks. Click the "+" button under the appropriate list to create a new
+                                    card. Fill in the task details in the card, like task name, description, due date,
+                                    assignees, etc.</p>
+                            </div>
+                        </div>
+                        <div class="howto">
+                            <p class="number">4.</p>
+                            <div class="use">
+                                <h2>Moving Cards</h2>
+                                <p>As the task moves from one stage to another, you can reflect that on the board by
+                                    dragging and dropping the card from one list to another.</p>
+                            </div>
+                        </div>
+                        <div class="howto">
+                            <p class="number">5.</p>
+                            <div class="use">
+                                <h2>Deleting Cards</h2>
+                                <div class="coint">
+                                    <p>Once a task is completed, you can either move it to the "Done" list or delete it.
+                                        Deleting a card will permanently remove it from the board. Please exercise
+                                        caution when deleting cards, as this action is irreversible.</p>
+                                    <p>Remember that using Join effectively requires consistent updates from you and
+                                        your team to ensure the board reflects the current state of your project.</p>
+                                    <p>Have more questions about Join? Feel free to contact us at
+                                        join397@developerakademie.com. We´re here to help you!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="enjoy">Enjoy using Join!</h2>
+                </div>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+.closeEditButton {
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#editTitle,
+.openEditTaskOverlayDescription input[type="text"],
+#editTitle,
+.openEditTaskOverlayDescription textarea,
+#editTitle,
+.openEditTaskOverlayDescription select {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 0px 0px 0px 10px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.openEditTaskOverlayMain {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.openEditTaskOverlayContent {
+    flex: 1;
+    max-height: 750px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-bottom: 60px;
+    overscroll-behavior: contain;
+}
+
+.editScrollbar {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a8a8a8 #ffffff;
+    margin-bottom: 40px;
+}
+
+.openEditTaskOverlayTitle {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 5px);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#editTitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 39.2px;
+}
+
+.openEditTaskOverlayDescription {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 5px);
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #42526E;
+    border: none;
+    border-radius: 10px;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.openEditTaskOverlayDescription label {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.openEditTaskOverlayDueDate {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 5px);
+    height: 23px;
+    margin-bottom: 50px;
+    font-family: Open Sans;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000 !important;
+    gap: 8px;
+}
+
+.duoDateColor {
+    color: #000000 !important;
+}
+
+.openEditTaskOverlayDueDate label {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.taskEditDate {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 12px 16px;
+}
+
+.openEditTaskOverlayPriority {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 5px);
+    font-size: 16px;
+    line-height: 19.2px;
+    margin-top: 82px;
+    margin-bottom: 15px;
+}
+
+.openEditTaskOverlayPriority label {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.openEditTaskOverlayAssignedContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: calc(100% - 5px);
+    height: 100vh;
+    gap: 25px;
+    color: #42526E;
+}
+
+.openEditTaskOverlayAssigned {
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.openTaskOverlayEditSubtaskTitle {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.openEditTaskOverlaySubtask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 15px;
+    max-width: calc(100% - 5px);
+    height: 30px;
+    gap: 25px;
+    color: #42526E;
+}
+
+.openEditAddSubtask {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.openEditAddSubtaskInput {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+#clearEditSubtask {
+    position: absolute;
+    right: 40px;
+    border-right: 1px solid #D1D1D1;
+    padding-right: 4px;
+}
+
+#addEditSubtask {
+    position: absolute;
+    right: 10px;
+}
+
+.editSubtaskPoint {
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center;
+    gap: 5px;
+}
+
+.hoverSubtask:hover {
+    height: 30px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.subtaskEditingContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.subtaskEditingContainer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.subtaskEditingContainer img {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.subtaskEditImg {
+    filter: grayscale(100%) brightness(0) sepia(100%) hue-rotate(180deg) saturate(1000%) contrast(100%) drop-shadow(0 0 0 #2A3647);
+    border-right: 1px solid #2A3647;
+    padding-right: 8px;
+}
+
+.subtaskEditingMainContainer {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.subtaskEditingInput {
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(40, 171, 226);
+    border-top: none;
+    width: 100%;
+    height: 30px;
+}
+
+.subtaskEditingImgMain {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80%;
+    padding-top: 2px;
+}
+
+.subtaskEditReImg {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 100%;
+    border-right: 1px solid #2A3647;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    padding-right: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.subtaskEditReImg2 {
+    filter: grayscale(100%) brightness(0) sepia(100%) hue-rotate(180deg) saturate(1000%) contrast(100%) drop-shadow(0 0 0 #2A3647);
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.openEditTaskSaveButtonSorting {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.openEditTaskSaveButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89px;
+    height: 57px;
+    padding: 16px;
+    gap: 8px;
+    border-radius: 10px;
+    background-color: rgb(42, 54, 71);
+    color: white;
+}
+
+.openEditTaskSaveButton:hover {
+    background-color: #29ABE2;
+}
+
+.saveButtonOk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89px;
+    height: 57px;
+    padding: 16px;
+    margin-left: 350px;
+    gap: 8px;
+    border-radius: 10px;
+    background-color: rgb(42, 54, 71);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.saveButtonOk:hover {
+    background-color: #29ABE2;
+}
+
+.openEditTaskOverlayTitle label {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.prioHeadline {
+    font-weight: bold;
+    color: #2A3647;
+}
+
+.prio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.priolow {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 10px;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.urgent:active {
+    background-color: rgb(255, 61, 0);
+    color: white;
+}
+
+.medium:active {
+    background-color: #FFA800;
+    color: white;
+}
+
+.low:active {
+    background-color: #7AE229;
+    color: white;
+}
+
+@media screen and (max-height: 1000px) {
+    .openEditTaskOverlayContent {
+        float: left;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        overscroll-behavior: contain;
+    }
+
+    /* .openEditTaskSaveButtonSorting {
+        bottom: 0;
+        left: 350px;
+        right: 0;
+        top: 590px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    } */
+
+    .add_task_required_info_box_overlay {
+        margin-top: calc(150px - 0px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-height: 840px) {
+    .openEditTaskOverlayContent {
+        padding-bottom: 10px;
+    }
+
+    /* .openEditTaskSaveButtonSorting {
+        left: 350px;
+        top: 560px;
+        padding: 10px;
+    } */
+}
